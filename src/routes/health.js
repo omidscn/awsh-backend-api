@@ -4,7 +4,7 @@ const { requireAuth } = require("../middleware/auth");
 const router = Router();
 
 router.get("/", (req, res) => {
-  res.json({ status: "ok" });
+  res.json({ status: "ok", version: "1.0.0" });
 });
 
 router.get("/auth", requireAuth, (req, res) => {
